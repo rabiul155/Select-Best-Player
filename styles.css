@@ -12,3 +12,17 @@
 .player {
     background-color: black;
 }
+
+.player h5 {
+    color: white;
+    text-align: center;
+}
+
+.player p {
+    text-align: center;
+}
+
+
+.player button {
+    width: 100%;
+}
