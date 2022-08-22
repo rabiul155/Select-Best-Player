@@ -1,3 +1,14 @@
-.header-background {
-    background-color: #000000;
+.body-color {
+    background-color: #252424;
+}
+
+.background-image {
+    background-image: url("images/logo2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.player {
+    background-color: black;
 }
