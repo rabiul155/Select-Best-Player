@@ -20,7 +20,6 @@ function playerPush(childPlayerNane) {
 function countChild() {
     const player = document.getElementById('player-list');
     const totalChild = player.childElementCount;
-    console.log(totalChild);
     return totalChild;
 }
 
@@ -118,10 +117,14 @@ document.getElementById('btn-ranato').addEventListener('click', function () {
 document.getElementById('btn-calculate').addEventListener('click', function () {
     const child = countChild();
     const perPlayerCost = document.getElementById('player-cost').value;
-    const totalCost = parseInt(child) * parseInt(perPlayerCost);
-    const playerExpences = document.getElementById('player-expance');
-    playerExpences.innerText = totalCost;
-
+    if (isNaN(perPlayerCost) == true || perPlayerCost == '') {
+        alert('please enter a number ');
+    }
+    else {
+        const totalCost = parseInt(child) * parseInt(perPlayerCost);
+        const playerExpences = document.getElementById('player-expance');
+        playerExpences.innerText = totalCost;
+    }
 
 })
 document.getElementById('total-expences').addEventListener('click', function () {
@@ -131,13 +134,17 @@ document.getElementById('total-expences').addEventListener('click', function () 
     const managerExpences = manager.value;
     const coach = document.getElementById('coach-paid');
     const coachExpences = coach.value;
+    if (isNaN(managerExpences) == true || isNaN(coachExpences) == true || managerExpences == '' || coachExpences == '') {
+        alert('please enter a number ');
+    }
+    else {
 
-    const totalAmount = parseInt(playerExpences) + parseInt(managerExpences) + parseInt(coachExpences);
+        const totalAmount = parseInt(playerExpences) + parseInt(managerExpences) + parseInt(coachExpences);
 
-    const totalAmountPaid = document.getElementById('total-ammount');
-    totalAmountPaid.innerText = totalAmount;
+        const totalAmountPaid = document.getElementById('total-ammount');
+        totalAmountPaid.innerText = totalAmount;
 
-
+    }
 
 
 })
