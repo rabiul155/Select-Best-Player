@@ -122,23 +122,25 @@
                     <img src="images/logo3.png" alt="">
                     <div class=" d-flex justify-content-between align-items-center">
                         <p class=" pt-2 text-muted fw-bold"> Per player :</p>
-                        <input class=" bg-dark w-50 text-white" type="text">
+                        <input id="player-cost" class=" bg-dark w-50 text-white" type="text">
                     </div>
                     <button id="btn-calculate" class=" btn btn-primary w-100 fw-bold my-2">Calculate</button>
-                    <p class=" text-muted fw-bold"> Player Expances : <span class="text-white">5000</span></p>
+                    <p class=" text-muted fw-bold"> Player Expances : <span class=" text-white"> $</span>
+                        <span id="player-expance" class="text-white">0000</span>
+                    </p>
                     <div class=" d-flex justify-content-between align-items-center">
                         <p class=" pt-2 text-muted fw-bold">Manager :</p>
-                        <input class=" bg-dark w-50 text-white" type="text">
+                        <input id="manager-paid" class=" bg-dark w-50 text-white" type="text">
                     </div>
                     <div class=" d-flex justify-content-between align-items-center">
                         <p class=" pt-2 text-muted fw-bold">Coach :</p>
-                        <input class=" bg-dark w-50 text-white" type="text">
+                        <input id="coach-paid" class=" bg-dark w-50 text-white" type="text">
                     </div>
-                    <button class=" btn btn-primary w-100 fw-bold my-2">Calculate total</button>
+                    <button id="total-expences" class=" btn btn-primary w-100 fw-bold my-2">Calculate total</button>
                     <div class=" d-flex justify-content-between">
                         <p class="text-muted fw-bold">Total </p>
                         <Span class="fw-bold text-warning">
-                            10000</Span>
+                            $ <span id="total-ammount">0000</span> </Span>
 
                     </div>
                 </div>

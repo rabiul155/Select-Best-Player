@@ -115,3 +115,29 @@ document.getElementById('btn-ranato').addEventListener('click', function () {
 
 })
 
+document.getElementById('btn-calculate').addEventListener('click', function () {
+    const child = countChild();
+    const perPlayerCost = document.getElementById('player-cost').value;
+    const totalCost = parseInt(child) * parseInt(perPlayerCost);
+    const playerExpences = document.getElementById('player-expance');
+    playerExpences.innerText = totalCost;
+
+
+})
+document.getElementById('total-expences').addEventListener('click', function () {
+    const getPlayerExpences = document.getElementById('player-expance');
+    const playerExpences = getPlayerExpences.innerText;
+    const manager = document.getElementById('manager-paid');
+    const managerExpences = manager.value;
+    const coach = document.getElementById('coach-paid');
+    const coachExpences = coach.value;
+
+    const totalAmount = parseInt(playerExpences) + parseInt(managerExpences) + parseInt(coachExpences);
+
+    const totalAmountPaid = document.getElementById('total-ammount');
+    totalAmountPaid.innerText = totalAmount;
+
+
+
+
+})
